@@ -7,7 +7,6 @@ namespace ModUwUs.Demo.View {
         public MainWindow() {
             InitializeComponent();
         }
-
         public IView? ViewOwner {
             get => Owner as IView;
             set {

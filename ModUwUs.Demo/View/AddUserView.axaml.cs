@@ -18,15 +18,17 @@ public partial class AddUserView : Window, IModalDialogView {
         AvaloniaXamlLoader.Load(this);
     }
 
-    public IView? ViewOwner { get; set; }
+    public IView? ViewOwner {
+        get => Owner as IView;
+        set {
+            if (value is Window window)
+                Owner = window;
+        }
+    }
     public void Show(IView owner) {
         Show(owner as Window);
     }
-
-    public Task ShowDialog(IView owner) {
-        throw new System.NotImplementedException();
-    }
-
+    
     public Task<TResult> ShowDialog<TResult>(IView owner) {
         return ShowDialog<TResult>(owner as Window);
     }

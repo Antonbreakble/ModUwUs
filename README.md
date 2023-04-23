@@ -1,7 +1,6 @@
 # ModUwUs
 ModUwUs - Simple Service For Open/Close Modal Window on Avalonia
 # How To Use
-## Mark View
 ### Mark you View (Owner for your model window) via ```IView``` Interface and implement it
 ```csharp
 public IView? ViewOwner

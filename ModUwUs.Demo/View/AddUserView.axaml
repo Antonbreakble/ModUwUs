@@ -1,0 +1,28 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        CanResize="False"
+        WindowStartupLocation="CenterOwner"
+        Height="210" Width="400"
+        x:Class="ModUwUs.Demo.View.AddUserView"
+        Title="AddUserView">
+    <StackPanel Margin="16">
+        <TextBox Margin="8" 
+                 Padding="4" 
+                 Text="{Binding FirstName}"
+                 VerticalContentAlignment="Center"
+                 Watermark="FirstName"/>
+        <TextBox Margin="8" 
+                 Padding="4" 
+                 Text="{Binding LastName}"
+                 VerticalContentAlignment="Center"
+                 Watermark="SecondName"/>
+        <Button Margin="8" 
+                Padding="4"
+                Content="Add User"
+                HorizontalAlignment="Right"
+                Command="{Binding AddUserCommand}"/>
+    </StackPanel>
+</Window>

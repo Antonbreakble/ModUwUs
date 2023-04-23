@@ -1,0 +1,27 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="using:ModUwUs.Demo.ViewModel"
+        mc:Ignorable="d" 
+        Width="500" Height="500"
+        x:Class="ModUwUs.Demo.View.MainWindow"
+        Title="ModUwUs.Demo">
+    <Grid Margin="32" VerticalAlignment="Center">
+        <StackPanel>
+            <TextBox Padding="4"
+                     Margin="8"
+                     VerticalContentAlignment="Center"
+                     Watermark="Example"
+                     Text="{Binding NewAccount}"/>
+            <Button Margin="8" 
+                    Content="Open Dialog"
+                    HorizontalAlignment="Right"
+                    Command="{Binding OpenAddUserDialogCommand}"/>
+            <Button Margin="8" 
+                    Content="Open Window"
+                    HorizontalAlignment="Right"
+                    Command="{Binding OpenAddUserWindowCommand}"/>
+        </StackPanel>
+    </Grid>
+</Window>
